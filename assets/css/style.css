@@ -1,11 +1,40 @@
 body{
-
     background-image: url("assets/images/wildtextures-concrete-wall-background.jpg");
-}
+    }
 
 header{
     padding:40 10 40 10px;
     background-color:blue;
-    color:white
+    color:white;
+    font-size: 36px;
     
+}
+
+#rules{
+    padding-bottom:50px;
+    background-color:forestgreen;
+    color:white;
+    font-size: 24px;
+
+}
+
+#score{
+    padding-bottom:30px;
+    background-color:orange;
+    color:black;
+    font-size:18px;
+}
+
+#wins{
+    padding-bottom:30px;
+    background-color:green;
+    color:yellow;
+    font-size:18px;
+}
+
+#user{
+    padding-bottom:20px;
+    background-color:purple;
+    color:white;
+    font-size:18px;
 }
