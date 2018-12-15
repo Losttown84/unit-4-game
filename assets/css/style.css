@@ -2,3 +2,10 @@ body{
 
     background-image: url("assets/images/wildtextures-concrete-wall-background.jpg");
 }
+
+header{
+    padding:40 10 40 10px;
+    background-color:blue;
+    color:white
+    
+}
