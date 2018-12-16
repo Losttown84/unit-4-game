@@ -7,7 +7,7 @@ header{
     background-color:blue;
     color:white;
     font-size: 36px;
-    
+    margin-right:600px;
 }
 
 #rules{
@@ -15,6 +15,7 @@ header{
     background-color:forestgreen;
     color:white;
     font-size: 24px;
+    margin-right:500px;
 
 }
 
@@ -23,6 +24,7 @@ header{
     background-color:orange;
     color:black;
     font-size:18px;
+    margin-right:700px;
 }
 
 #wins{
@@ -32,9 +34,27 @@ header{
     font-size:18px;
 }
 
+#crystalOne{
+    float:left;
+}
+
+#crystalTwo{
+    float:left;
+}
+
+#crystalThree{
+    float:left;
+}
+
+#crystalFour{
+    float:left;
+}
+
 #user{
     padding-bottom:20px;
     background-color:purple;
     color:white;
     font-size:18px;
+    margin-right: 700px;
+    clear:both;
 }
