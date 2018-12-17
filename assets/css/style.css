@@ -1,44 +1,11 @@
-body{
-    image: url("assets/images/wildtextures-concrete-wall-background.jpg");
-    }
-
-header{
-    padding:40 10 40 10px;
-    background-color:blue;
-    color:white;
-    font-size: 36px;
-    margin-right:600px;
+.crystals{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
 }
 
-#rules{
-    padding-bottom:50px;
-    background-color:forestgreen;
-    color:white;
-    font-size: 24px;
-    margin-right:500px;
-
-}
-
-#score{
-    padding-bottom:30px;
-    background-color:orange;
-    color:black;
-    font-size:18px;
-    margin-right:700px;
-}
-
-#wins{
-    padding-bottom:30px;
-    background-color:green;
-    color:yellow;
-    font-size:18px;
-}
-
-#user{
-    padding-bottom:20px;
-    background-color:purple;
-    color:white;
-    font-size:18px;
-    margin-right: 700px;
-    clear:both;
+.crystal{
+    border: solid red 5px;
+    height:200px;
+    width:200px;
 }
