@@ -11,10 +11,21 @@
 var random;
 var loss;
 var win;
+
+randomResult = Math.floor(Math.random() * 19 ) + 101;
+
+$("#computersnumber").html("Computer's Number:" + ramdomResult);
 //the below creats 4 divs to hold our crystals and assigns it a css class
 for(var i = 0; i< 4; i++){
 
+    var randomCrystal = Math.floor(Math.random() * 11) +1;
+    console.log(randomCrystal);
     var crystal = $("<div>");
-        crystal.attr("class", 'crystal');
+        crystal.attr({
+            "class": 'crystal',
+            "data-random": random
+        });
+
     $(".crystals").append(crystal);
 }
+
