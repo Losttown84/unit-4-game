@@ -11,26 +11,29 @@
 var random;
 var loss;
 var win;
+
 //below is the match needed for the Computer Generated random number
 randomResult = Math.floor(Math.random() * 19 ) + 101;
 //printing it to the screen
-$("#computersnumber").html('Computers Number:' + randomResult);
+$("#computersnumber").html("Computer's Number:" + randomResult);
 
 
 //the below creates 4 divs to hold our crystals and assigns it a css class
 for(var i = 0; i< 4; i++){
 
     var randomCrystal = Math.floor(Math.random() * 11) +1; //assigning each crystal a random number between 1 and 12
+    console.log("Pre assignment" + randomCrystal)
     var crystal = $("<div>");
         crystal.attr({
             "class": 'crystal',
-            "data-random": random
+            "data-random": randomCrystal
         });
+    console.log("Post assignment" + crystal.attr("data-random"));
 
     $(".crystals").append(crystal);
 }
 
-$(".crystals").on("click", function (){
+$(".crystal").on("click", function (){
 
     console.log($(this).attr("data-random"));
 });
