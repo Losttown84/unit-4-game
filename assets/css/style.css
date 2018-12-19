@@ -16,6 +16,11 @@
     color:white;
     font-style: bold;
     font-size:24px;
+    background-color:black;
+    margin-right:500px;
+    text-align:center;
+    border:double red;
+    display:inline;
 }
 
 #win{
@@ -30,12 +35,17 @@
     font-size:18px;
 }
 
-p{
+#rules{
     color:white;
     font-size:16px;
+    padding-right: 50px;
+    background-color:black;
+
 }
 
 h1{
     color:white;
     font-size:36px;
+    background-color:purple;
+    display:inline;
 }

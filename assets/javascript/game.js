@@ -2,16 +2,17 @@ var random;
 var loss = 0;
 var win = 0;
 var previousNumber = 0;
+var images = "blue crystal.png, green crystal.png, white crystal.jpg, yellowcrystal.jpg";
 
-var startReset = function (){
+var startandReset = function (){
 
-    $(".crystal").empty();
+    $(".crystals").empty(0);
 
     randomResult = Math.floor(Math.random() *  120) +19;
 
     $("#computersnumber").html("Computer's Number:" + randomResult);
 
-    for(var i = 0; i< 4; i++){
+    for(var i = 0; i < 4; i++){
 
         var randomCrystal = Math.floor(Math.random() * 11) +1; //assigning each crystal a random number between 1 and 12
 
@@ -25,7 +26,7 @@ var startReset = function (){
     }
 }
 
-startReset(0);
+startandReset(0);
 
 var reset = function (){
 
@@ -57,23 +58,24 @@ $(".crystal").on("click", function (){
     previousNumber += num;
         console.log(previousNumber);
     if(previousNumber === randomResult){
-        win++;;
+
+        win++;
 
         $("#win").append(win);
 
         previous = 0;
 
-        startReset();
+        startandReset(0);
     }
     else if(previousNumber > randomResult){
 
-        lost--;
+        lost++;
 
-        $("#lost").html(lost);
+        $("#lost").append(lost);
 
         previous = 0;
 
-        startReset();
+        startandReset(0);
     }
 });
 
