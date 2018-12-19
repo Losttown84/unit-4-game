@@ -35,13 +35,18 @@ for(var i = 0; i< 4; i++){
 
     $(".crystals").append(crystal);
 }
-
+//clicking a crystal will log a number, but I cannot get it to add together
 $(".crystal").on("click", function (){
 
     var num = parseInt($(this).attr("data-random"));
 
     previousNumber += num;
-
-    console.log($(this).attr("data-random"));
+        console.log(previousNumber);
+    if(previousNumber > randomResult){
+        console.log("You lost!");
+    }
+    else if(previousNumber === randomResult){
+        console.log("Win!");
+    }
 });
 
