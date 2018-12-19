@@ -22,18 +22,24 @@ $("#computersnumber").html("Computer's Number:" + randomResult);
 for(var i = 0; i< 4; i++){
 
     var randomCrystal = Math.floor(Math.random() * 11) +1; //assigning each crystal a random number between 1 and 12
-    console.log("Pre assignment" + randomCrystal)
     var crystal = $("<div>");
         crystal.attr({
             "class": 'crystal',
             "data-random": randomCrystal
         });
-    console.log("Post assignment" + crystal.attr("data-random"));
 
     $(".crystals").append(crystal);
 }
 
 $(".crystal").on("click", function (){
+
+
+    var firstCrystal = 
+    var secondCrystal = 
+    var thirdCrystal = 
+    var fourthCrystal = 
+
+    var result;
 
     console.log($(this).attr("data-random"));
 });
