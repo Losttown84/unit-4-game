@@ -18,7 +18,7 @@ var previousNumber = 0;
 //var fourthCrystal = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
 //below is the match needed for the Computer Generated random number
-randomResult = Math.floor(Math.random() * 19 ) + 101;
+randomResult = Math.floor(Math.random() *  120) +19;
 //printing it to the screen
 $("#computersnumber").html("Computer's Number:" + randomResult);
 
@@ -43,10 +43,14 @@ $(".crystal").on("click", function (){
     previousNumber += num;
         console.log(previousNumber);
     if(previousNumber > randomResult){
-        console.log("You lost!");
+        lost--;
+
+        $("#lost").html(lost);
     }
     else if(previousNumber === randomResult){
-        console.log("Win!");
+        win++;
+
+        $("#win").html(win);
     }
 });
 
