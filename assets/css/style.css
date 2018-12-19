@@ -2,10 +2,30 @@
     display:flex;
     justify-content:space-between;
     align-items: center;
+    color:white;
 }
 
 .crystal{
     border: solid red 5px;
     height:200px;
     width:200px;
+    color:white;
+}
+
+#computersnumber{
+    color:lightblue;
+    font-style: bold;
+    font-size:24px;
+}
+
+#win{
+    color:greenyellow;
+    font-style:bold;
+    font-size:18px;
+}
+
+#lost{
+    color:greenyellow;
+    font-style:bold;
+    font-size:18px;
 }
