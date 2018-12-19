@@ -13,7 +13,7 @@
 }
 
 #computersnumber{
-    color:lightblue;
+    color:white;
     font-style: bold;
     font-size:24px;
 }
@@ -28,4 +28,14 @@
     color:greenyellow;
     font-style:bold;
     font-size:18px;
+}
+
+p{
+    color:white;
+    font-size:16px;
+}
+
+h1{
+    color:white;
+    font-size:36px;
 }
