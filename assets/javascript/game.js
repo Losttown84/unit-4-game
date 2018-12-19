@@ -11,6 +11,11 @@
 var random;
 var loss;
 var win;
+var previousNumber = 0;
+//var firstCrystal = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]; is there a way to get these vars to add together when chosen to equal the Computer's number?
+//var secondCrystal = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+//var thirdCrystal = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+//var fourthCrystal = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
 //below is the match needed for the Computer Generated random number
 randomResult = Math.floor(Math.random() * 19 ) + 101;
@@ -33,13 +38,9 @@ for(var i = 0; i< 4; i++){
 
 $(".crystal").on("click", function (){
 
+    var num = parseInt($(this).attr("data-random"));
 
-    var firstCrystal = 
-    var secondCrystal = 
-    var thirdCrystal = 
-    var fourthCrystal = 
-
-    var result;
+    previousNumber += num;
 
     console.log($(this).attr("data-random"));
 });
