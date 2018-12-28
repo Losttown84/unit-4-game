@@ -1,84 +1,18 @@
-var random;
+var random_result;
 var loss = 0;
 var win = 0;
 var previousNumber = 0;
 var images = "blue crystal.png, green crystal.png, white crystal.jpg, yellowcrystal.jpg";
 
-var startandReset = function (){
+for(var i = 0; i<4; i++){
 
-    $(".crystals").empty(0);
-
-    randomResult = Math.floor(Math.random() *  120) +19;
-
-    $("#computersnumber").html("Computer's Number:" + randomResult);
-
-    for(var i = 0; i < 4; i++){
-
-        var randomCrystal = Math.floor(Math.random() * 11) +1; //assigning each crystal a random number between 1 and 12
-
-        var crystal = $("<div>");
-            crystal.attr({
-                "class": 'crystal',
-                "data-random": randomCrystal
-            });
-
-    $(".crystals").append(crystal);
-    }
-}
-
-startandReset(0);
-
-var reset = function (){
-
-}
-
-//below is the match needed for the Computer Generated random number
-randomResult = Math.floor(Math.random() *  120) +19;
-//printing it to the screen
-$("#computersnumber").html("Computer's Number:" + randomResult);
-
-
-//the below creates 4 divs to hold our crystals and assigns it a css class
-for(var i = 0; i< 4; i++){
-
-    var randomCrystal = Math.floor(Math.random() * 11) +1; //assigning each crystal a random number between 1 and 12
     var crystal = $("<div>");
-        crystal.attr({
-            "class": 'crystal',
-            "data-random": randomCrystal
-        });
+        crystal.attr("class", 'crystal');
 
     $(".crystals").append(crystal);
+    console.log("Hello World!");
+
 }
-//clicking a crystal will log a number
-$(".crystal").on("click", function (){
-
-    var num = parseInt($(this).attr("data-random"));
-
-    previousNumber += num;
-        console.log(previousNumber);
-    if(previousNumber === randomResult){
-
-        win++;
-
-        $("#win").append(win);
-
-        previous = 0;
-
-        startandReset(0);
-    }
-    else if(previousNumber > randomResult){
-
-        lost++;
-
-        $("#lost").append(lost);
-
-        previous = 0;
-
-        startandReset(0);
-    }
-});
-
 
 
 
