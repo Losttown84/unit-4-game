@@ -4,17 +4,59 @@ var win = 0;
 var previousNumber = 0;
 var images = "blue crystal.png, green crystal.png, white crystal.jpg, yellowcrystal.jpg";
 
-for(var i = 0; i<4; i++){
 
-    var crystal = $("<div>");
-        crystal.attr("class", 'crystal');
 
-    $(".crystals").append(crystal);
-    console.log("Hello World!");
+var resetAndStart = function() {
 
+    $(".crystals").empty();
+
+    random_result = Math.floor(Math.random() * 101) + 19;
+
+    $("#result").html('Random Result:' + random_result);
+
+    for(var i = 0; i<4; i++){
+
+        var random = Math.floor(Math.random() * 11) +1;
+
+        var crystal = $("<div>");
+            crystal.attr({
+                "class": 'crystal',
+                "data-random":random
+                });
+
+        $(".crystals").append(crystal);
+
+    }
 }
 
+resetAndStart();
 
+$(document).on('click', ".crystal", function (){
+
+    var num = parseInt($(this).attr('data-random'));
+
+    previousNumber += num;
+
+    if(previousNumber > random_result){
+        lost++;
+
+        $("#lost").html(lost);
+
+        previousNumber = 0;
+
+        resetAndStart();
+    }
+    else if (previousNumber === random_result){
+        win++;
+
+        $("#win").html(win);
+
+        previousNumber = 0;
+
+        resetAndStart();
+    }
+
+});
 
 //Start with Computer Generated random number from between 19-120.
 //Need to create 4 crystals that each contains a random number from 1-12
