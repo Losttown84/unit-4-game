@@ -2,13 +2,18 @@ var random_result;
 var loss = 0;
 var win = 0;
 var previousNumber = 0;
-var images = "blue crystal.png, green crystal.png, white crystal.jpg, yellowcrystal.jpg";
+
 
 
 
 var resetAndStart = function() {
 
     $(".crystals").empty();
+
+    var images = ["assets/images/blue crystal.png", 
+                  "assets/images/green crystal.png",
+                  "assets/images/white crystal.jpg", 
+                  "assets/images/yellowcrystal.jpg"];
 
     random_result = Math.floor(Math.random() * 101) + 19;
 
@@ -18,15 +23,20 @@ var resetAndStart = function() {
 
         var random = Math.floor(Math.random() * 11) +1;
 
-        var crystal = $("<div>");
+        var crystal = $("<div>").append(images);
             crystal.attr({
                 "class": 'crystal',
                 "data-random":random
                 });
-
+                crystal.css({
+                    "background-image":"local(" + images[1] + ")",
+                    "background-size":"cover"
+                });
         $(".crystals").append(crystal);
 
     }
+
+    $("#total").html("Total Score: " + previousNumber);
 }
 
 resetAndStart();
@@ -37,10 +47,12 @@ $(document).on('click', ".crystal", function (){
     
     previousNumber += num;
     console.log(previousNumber);
+    $("#total").html("Total Score: " + previousNumber);
+
     if(previousNumber > random_result){
         lost++;
 
-        $("#lost").html(lost);
+        $("#lost").html("Lost: ", lost);
 
         previousNumber = 0;
 
@@ -49,7 +61,7 @@ $(document).on('click', ".crystal", function (){
     else if (previousNumber === random_result){
         win++;
 
-        $("#win").html(win);
+        $("#win").html("Won", win);
 
         previousNumber = 0;
 
