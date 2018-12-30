@@ -32,11 +32,11 @@ var resetAndStart = function() {
 resetAndStart();
 
 $(document).on('click', ".crystal", function (){
-
+    
     var num = parseInt($(this).attr('data-random'));
-
+    
     previousNumber += num;
-
+    console.log(previousNumber);
     if(previousNumber > random_result){
         lost++;
 
