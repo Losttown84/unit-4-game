@@ -10,10 +10,10 @@ var resetAndStart = function() {
 
     $(".crystals").empty();
 
-    var images = ["assets/images/blue crystal.png", 
-                  "assets/images/green crystal.png",
-                  "assets/images/white crystal.jpg", 
-                  "assets/images/yellowcrystal.jpg"];
+    var images = ["assets/images/blue_crystal.png", 
+                  "assets/images/green_crystal.png",
+                  "assets/images/white_crystal.jpg", 
+                  "assets/images/yellow_crystal.jpg"];
 
     random_result = Math.floor(Math.random() * 101) + 19;
 
@@ -23,10 +23,11 @@ var resetAndStart = function() {
 
         var random = Math.floor(Math.random() * 11) +1;
 
-        var crystal = $("<div>").append(images);
+        var crystal = $("<img>")
             crystal.attr({
                 "class": 'crystal',
-                "data-random":random
+                "data-random":random,
+                "src": images[i]
                 });
                 crystal.css({
                     "background-image":"local(" + images[1] + ")",
